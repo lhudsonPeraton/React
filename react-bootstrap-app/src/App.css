@@ -49,10 +49,14 @@
 
 .weather-sidepanel {
   flex: 1;
-  border: 1px solid blue;
+  background: linear-gradient(180deg, #1976D2, #bbbbbb);
 }
 
 .weather-map {
   flex: 4;
-  border: 1px solid red;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 93vh;
 }
