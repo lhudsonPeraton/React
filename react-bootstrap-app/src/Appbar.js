@@ -31,45 +31,46 @@ class Appbar extends Component {
 
     render() {
         return (
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
-                    <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                        onClick={(e) => {
-                            this.setState({
-                                isMenuOpen: true,
-                                anchor: e.target
-                            });
-                        }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Menu
-                        id="menu"
-                        anchorEl={this.state.anchor} // Uses this object as anchor point for the menu
-                        open={this.state.isMenuOpen} // Component's state controls whether the Menu is opened or not
-                        onClose={() => {this.handleClose()}}
-                    >
-                        <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[0])}}>{this.state.tabs[0]}</MenuItem>
-                        <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[1])}}>{this.state.tabs[1]}</MenuItem>
-                        <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[2])}}>{this.state.tabs[2]}</MenuItem>
-                    </Menu>
-                    {/* Uses the activePage prop from the parent component to render the navbar header */}
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        {this.props.activePage}
-                    </Typography>
-                    </Toolbar>
-                </AppBar>
-            </Box>
+            <div className="appbar-container">
+                <Box sx={{ flexGrow: 1 }}>
+                    <AppBar position="static">
+                        <Toolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                            onClick={(e) => {
+                                this.setState({
+                                    isMenuOpen: true,
+                                    anchor: e.target
+                                });
+                            }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu"
+                            anchorEl={this.state.anchor} // Uses this object as anchor point for the menu
+                            open={this.state.isMenuOpen} // Component's state controls whether the Menu is opened or not
+                            onClose={() => {this.handleClose()}}
+                        >
+                            <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[0])}}>{this.state.tabs[0]}</MenuItem>
+                            <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[1])}}>{this.state.tabs[1]}</MenuItem>
+                            <MenuItem onClick={() => {this.handleSelectPage(this.state.tabs[2])}}>{this.state.tabs[2]}</MenuItem>
+                        </Menu>
+                        {/* Uses the activePage prop from the parent component to render the navbar header */}
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            {this.props.activePage}
+                        </Typography>
+                        </Toolbar>
+                    </AppBar>
+                </Box>
+            </div>
         );
     }
-
 }
 
-
+// Export the component so it can be imported in other files
 export default Appbar;

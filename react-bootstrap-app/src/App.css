@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.appbar-container {
+  height: 7vh;
+}
+
+.weather-page-container {
+  display: flex;
+  justify-content: left;
+  height: 93vh;
+}
+
+.weather-sidepanel {
+  flex: 1;
+  border: 1px solid blue;
+}
+
+.weather-map {
+  flex: 4;
+  border: 1px solid red;
+}
