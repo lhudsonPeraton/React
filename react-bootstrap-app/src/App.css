@@ -79,7 +79,13 @@
 
 .button-wrapper {
   margin-top: 1vh;
-  width: 50%;
+  width: 20%;
+  transition: all 0.5s ease;
+}
+
+.button-wrapper:hover {
+  width: 40%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .latlng-button {

@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import { useMapEvents } from 'react-leaflet/hooks';
 // Import Material UI components
-import { Input, Button } from '@mui/material';
+import { Input, Button, Tooltip } from '@mui/material';
+import CloudIcon from '@mui/icons-material/Cloud';
+// Import axios for making calls to the weather API
+import axios from "axios";
 
 const homePosition = [37.227746, -80.421960];
 
@@ -39,6 +42,18 @@ function Weather() {
                     >
                         Go
                     </Button>
+                </div>
+                <div className="button-wrapper">
+                    <Tooltip title="Get Weather Data" placement="bottom">
+                        <Button
+                            className="latlng-button"
+                            onClick={() => {
+                                
+                            }}
+                        >
+                            <CloudIcon/>
+                        </Button>
+                    </Tooltip>
                 </div>
             </div>
             <div className="weather-map">
