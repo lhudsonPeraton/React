@@ -13,7 +13,7 @@ function Weather() {
 
             </div>
             <div className="weather-map">
-                <MapContainer center={homePosition} zoom={10}>
+                <MapContainer center={homePosition} zoom={13}>
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
