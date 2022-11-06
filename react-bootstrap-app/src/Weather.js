@@ -31,7 +31,7 @@ function Weather() {
                 setForecast(res.data.properties.periods);
             })
             .catch((err) => {
-                alert(err);
+                alert("Could not find weather data for this location! Please try again.");
             })
         })
         .catch((err) => {
