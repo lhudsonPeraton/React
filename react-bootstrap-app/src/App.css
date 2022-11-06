@@ -78,13 +78,13 @@
 }
 
 .button-wrapper {
-  margin-top: 1vh;
-  width: 20%;
+  margin-top: 1vh !important;
   transition: all 0.5s ease;
+  background-color: rgba(119, 227, 107, 0.9);
 }
 
 .button-wrapper:hover {
-  width: 40%;
+  transform: scale(1.10);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -93,4 +93,60 @@
   background-color: rgba(255, 255, 255, 0.6) !important;
   font-weight: 700 !important;
   width: 100%;
+}
+
+.locator {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid white;
+  padding-bottom: 3vh;
+}
+
+.daily-weather-panel {
+  flex: 3;
+  width: 90%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.forecast {
+  padding-bottom: 1vh;
+  width: 90%;
+  border-bottom: 1px solid black;
+}
+
+.daily-weather-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+  height: 30%;
+}
+
+.panel-header {
+  font-family: Impact !important;
+}
+
+.daily-weather-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2vh;
+  height: 60%;
+}
+
+.daily-weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
 }
