@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Appbar from './Appbar';
 // Import Weather Page
 import Weather from './Weather';
-
+import Crypto from './Crypto';
 function App() {
   // In function components use React Hooks to manage your state
   const [activePage, setActivePage] = useState("Weather"); // Setting the default landing page to Weather
@@ -24,8 +24,7 @@ function App() {
       }
       <Appbar activePage={activePage} handleSelectPage={handleSelectPage}/>
       {activePage.toLowerCase() === "weather" ? <Weather/> : null}
-      {activePage.toLowerCase() === "cryptocurrency" ? <div><h1>cryptocurrency!</h1></div>: null}
-      {activePage.toLowerCase() === "security" ? <div><h1>security!</h1></div>: null}
+      {activePage.toLowerCase() === "cryptocurrency" ? <div><Crypto/></div>: null}
     </div>
   );
 }

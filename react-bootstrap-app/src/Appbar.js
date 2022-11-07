@@ -9,7 +9,7 @@ class Appbar extends Component {
         super(props); // Super refers to the parent class constructor and allows us to use the keyword "this" in reference to this component.
         // Setting component's default state
         this.state = {
-            tabs: ["Weather", "Cryptocurrency", "Security"],
+            tabs: ["Weather", "Cryptocurrency"],
             isMenuOpen: false,
             anchor: null
         }
