@@ -45,8 +45,7 @@ function Crypto() {
         .then((res) => {
             console.log(res);
             // Using the response from the get call, set the coin ids in the drop down
-            let startingInt = Math.floor(Math.random() * 5000);
-            setCoinIds(res.data.slice(startingInt, startingInt + 10));
+            setCoinIds(res.data.slice(5000, 5010));
         })
         .catch((err) => {
             alert(err);
