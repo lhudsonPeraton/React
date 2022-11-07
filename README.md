@@ -5,6 +5,7 @@ Introductions
     VS Code is an IDE we recommend for working with React
     
 Creating a react app
+
     1. Install NodeJS
     2. run "npx create-react-app react-bootstrap-app" to create the base react app
     3. run "npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-plotly.js plotly.js axios" to install the material-ui dependencies
