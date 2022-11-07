@@ -151,3 +151,20 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
 }
+
+.crypto-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid white;
+  padding-bottom: 3vh;
+  gap: 10px;
+  width: 80%;
+}
+
+.coin-type-selector {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 10vw;
+}

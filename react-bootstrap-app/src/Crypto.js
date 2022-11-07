@@ -7,7 +7,7 @@ import { Input, Button, MenuItem, Select, Tooltip, Typography } from '@mui/mater
 import Plot from 'react-plotly.js';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import CloudIcon from '@mui/icons-material/Cloud';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 // Import axios for making calls to the crypto API
 import axios from "axios";
 import { margin } from "@mui/system";
@@ -130,7 +130,15 @@ function Crypto() {
             }
         })
         return (          
-            <div >              
+            <div className="daily-weather-body">              
+                <div className="daily-weather-data">
+                    <Typography variant="h6">
+                        Avg. Volume
+                    </Typography>
+                    <Typography paragraph={true}>
+                        {marketData !== null && marketData.total_volumes !== null ? averageTradeVolume() : "N/A"}
+                    </Typography>
+                </div>
                 <div className="daily-weather-data">
                     <Typography variant="h6">
                         Avg. Price
@@ -164,10 +172,11 @@ function Crypto() {
         <div className="weather-page-container">
             <div className="weather-sidepanel">
                 {/* This panel is used for navigating to a given position and fetching the crypto data */}
-                <div className="locator">
+                <div className="crypto-selector">
                     <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
                         <InputLabel id="demo-simple-select-standard-label">Coin type</InputLabel>
                             <Select
+                                className="coin-type-selector"
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={selectId}
@@ -185,7 +194,7 @@ function Crypto() {
                                     fetchCoinMarketData();
                                 }}
                             >
-                                <CloudIcon/>
+                                <MonetizationOnIcon />
                             </Button>
                         </Tooltip>
                     </div>
@@ -200,17 +209,7 @@ function Crypto() {
                             {selectId !== '' ? selectId.symbol.toUpperCase() : "Coin Symbol"}
                         </Typography>
                     </div>
-                    <div className="daily-weather-body">
-                        <div className="daily-weather-data">
-                            <Typography variant="h6">
-                                Avg. Volume
-                            </Typography>
-                            <Typography paragraph={true}>
-                                {marketData !== null && marketData.total_volumes !== null ? averageTradeVolume() : "N/A"}
-                            </Typography>
-                        </div>
-                        {pricingInformation()}
-                    </div>
+                    {pricingInformation()}
                 </div>
             </div>
             {/* This panel uses a Plotly graph to display the market data */}
