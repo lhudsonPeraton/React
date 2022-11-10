@@ -118,7 +118,7 @@ function Crypto() {
             if (max < currentValue){
                 max = currentValue
             }
-            if (min == -1 || min > currentValue){
+            if (min === -1 || min > currentValue){
                 min = currentValue;
             }
         })

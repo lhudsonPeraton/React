@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 // Import Custom Appbar
 import Appbar from './Appbar';
 // Import Weather Page
-import Weather from './Weather';
-import Crypto from './Crypto';
+import Weather from './components/Weather';
+import Crypto from './components/Crypto';
 function App() {
   // In function components use React Hooks to manage your state
   const [activePage, setActivePage] = useState("Weather"); // Setting the default landing page to Weather
