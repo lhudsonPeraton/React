@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Import react leaflet components
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { useMapEvents } from 'react-leaflet/hooks';
 // Import Material UI components
 import { Input, Button, Tooltip, Typography } from '@mui/material';

@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from "react";
-// Import react leaflet components
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import { useMapEvents } from 'react-leaflet/hooks';
 // Import Material UI components
-import { Input, Button, MenuItem, Select, Tooltip, Typography } from '@mui/material';
+import { Button, MenuItem, Select, Tooltip, Typography } from '@mui/material';
 import Plot from 'react-plotly.js';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 // Import axios for making calls to the crypto API
 import axios from "axios";
-import { margin } from "@mui/system";
-
-// Setting home position to the drill field
-const homePosition = [37.227746, -80.421960];
 
 function Crypto() {
     // Using React hooks to manage state of the crypto function component
-    const [init, setInit] = useState(false); // init holds if the component data has been initialized
     const [coinIds, setCoinIds] = useState([]); // coinIds holds list of coin id data
     const [selectId, setSelectedId] = useState(''); // selectId holds the selected object from the dropdown
     const [marketData, setMarketData] = useState(null); // marketData holds market data for request object
@@ -70,22 +62,24 @@ function Crypto() {
         })
     }
 
+    //Fetch coin ids after component mount
     useEffect(() => {
-        if (!init){
-            setInit(true);
-            fetchCoinIds();
-        }
+        fetchCoinIds();
+    }, []);
+
+    //Re-create plot data each time marketData changes
+    useEffect(() => {
         if (marketData !== null){
             createPlotData();
         }
-    });
+    }, [marketData]);
 
-    //Transforms the market data into data that can be ploted
+    //Transforms the market data into data that can be plotted
     const createPlotData = () => {
         let x =[];
         let y = [];
         marketData.prices.forEach(function(price) {
-            var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+            let d = new Date(0); // The 0 there is the key, which sets the date to the epoch
             d.setUTCSeconds(price[0]/1000);
             x.push(d)
             y.push(price[1].toFixed(8))
@@ -164,7 +158,6 @@ function Crypto() {
                 </div>
             </div>
        );
-        return ;
     }
 
     return (
@@ -241,23 +234,6 @@ function Crypto() {
             </div>
         </div>
     );
-}
-
-// This component handles events with the map
-function Map(props) {
-    const map = useMapEvents({
-        // Clicking the map sets the position and tempPosition
-        click: (e) => {
-            props.setPosition(e.latlng);
-            props.setTempPosition(e.latlng);
-        }
-    })
-    // useEffect runs upon the component mounting and updating,
-    // so whenever position is updated, the map will pan to new position
-    useEffect(() => {
-        map.panTo(props.position);
-    })
-    return null
 }
 
 export default Crypto;
