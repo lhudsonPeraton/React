@@ -23,7 +23,7 @@ function App() {
       }
       <Appbar activePage={activePage} handleSelectPage={handleSelectPage}/>
       {activePage.toLowerCase() === "weather" ? <Weather/> : null}
-      {activePage.toLowerCase() === "cryptocurrency" ? <div><Crypto/></div>: null}
+      {activePage.toLowerCase() === "cryptocurrency" ? <Crypto/> : null}
     </div>
   );
 }

@@ -179,7 +179,7 @@ function Crypto() {
                             </Select>
                     </FormControl>
                     <div className="button-wrapper">
-                        <Tooltip title="Get crypto Data" placement="bottom">
+                        <Tooltip title="Get Crypto Data" placement="bottom">
                             <Button
                                 className="latlng-button"
                                 onClick={() => {
