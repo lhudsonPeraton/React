@@ -8,7 +8,7 @@ Creating a react app
 
     1. Install NodeJS
     2. run "npx create-react-app react-bootstrap-app" to create the base react app
-    3. run "npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-plotly.js plotly.js axios" to install the material-ui dependencies
+    3. run "npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios" to install the material-ui, react-router, react-leaflet, and plotly dependencies
     4. run "npm run start" to run the react app
 
 Steps for creating a component
