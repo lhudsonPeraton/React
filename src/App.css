@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.appbar-container {
+  height: 7vh;
+}
+
+.weather-page-container {
+  display: flex;
+  justify-content: left;
+  height: 93vh;
+}
+
+.weather-sidepanel {
+  flex: 1;
+  background: linear-gradient(180deg, #1976D2, #bbbbbb);
+}
+
+.weather-map {
+  flex: 4;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 93vh;
+}
+
+.weather-sidepanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.latlng-input {
+  padding: 5px;
+  margin: 5px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 5px;
+}
+
+.button-wrapper {
+  margin-top: 1vh !important;
+  transition: all 0.5s ease;
+  background-color: rgba(119, 227, 107, 0.9);
+}
+
+.button-wrapper:hover {
+  transform: scale(1.10);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.latlng-button {
+  color: #111111 !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: 700 !important;
+  width: 100%;
+}
+
+.locator {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid white;
+  padding-bottom: 3vh;
+}
+
+.daily-weather-panel {
+  flex: 3;
+  width: 90%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.forecast {
+  padding-bottom: 1vh;
+  width: 90%;
+  border-bottom: 1px solid black;
+}
+
+.daily-weather-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vh;
+  height: 30%;
+}
+
+.panel-header {
+  font-family: Impact !important;
+}
+
+.daily-weather-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2vh;
+  height: 60%;
+}
+
+.daily-weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.crypto-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid white;
+  padding-bottom: 3vh;
+  gap: 10px;
+  width: 80%;
+}
+
+.coin-type-selector {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 10vw;
+}
