@@ -1,5 +1,4 @@
-# VTHacks
-VT Hacks 2022 
+# React Sample App
 
 Introductions
     VS Code is an IDE we recommend for working with React
