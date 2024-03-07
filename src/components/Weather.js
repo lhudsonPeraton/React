@@ -8,12 +8,15 @@ import CloudIcon from '@mui/icons-material/Cloud';
 // Import axios for making calls to the weather API
 import axios from "axios";
 
-// Setting home position to the drill field
-const homePosition = [37.227746, -80.421960];
+// Former: Setting home position to the drill field: 37.227746, -80.421960
+// Penn State University Update: Setting home position to PSU
+const homePosition = [40.798214, -77.859909];
 
 function Weather() {
     // Using React hooks to manage state of the Weather function component
-    const [position, setPosition] = useState({lat: 37.227746, lng: -80.421960}); // position is used for latitude and longitude passed into API
+    //Former VT Position: lat: 37.227746, lng: -80.421960
+    //Penn State University Update: 40.798214, -77.859909
+    const [position, setPosition] = useState({lat: 40.798214, lng: -77.859909}); // position is used for latitude and longitude passed into API
     const [tempPosition, setTempPosition] = useState(position); // tempPosition is used to handle input boxes
     const [forecast, setForecast] = useState(null); // forecast holds forecast data
     const [location, setLocation] = useState(null); // location holds location data
