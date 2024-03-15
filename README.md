@@ -1,16 +1,27 @@
 # React Sample App
 
-Introductions
+## Introductions
     VS Code is an IDE we recommend for working with React
+
+## Deploying the Sample App
+1. Install NodeJS
+2. Clone this repository
+3. Change directories into the React folder if necessary
+   - Run `cd React`
+4. Run `npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`
+5. Run `npm run start`
+   - Any warnings can be ignored
+6. Open a web browser and go to https://localhost:3000
+   - The sample app should load on the screen! 
     
-Creating a react app
+## Creating a New React App
 
     1. Install NodeJS
     2. run "npx create-react-app react-bootstrap-app" to create the base react app
     3. run "npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios" to install the material-ui, react-router, react-leaflet, and plotly dependencies
     4. run "npm run start" to run the react app
 
-Steps for creating a component
+### Steps for creating a component
 
     1. Design the layout of the webpage and break it down into reusable components where possible
     2. Determine how data will flow in your application (passing via props and component state)
@@ -19,14 +30,14 @@ Steps for creating a component
     4. Import needed components from your other created components and libraries
     5. Add state and props as needed
 
-Steps for adding components to your page
+### Steps for adding components to your page
 
     1. See index.js where top-level component, App.js, is rendered
     2. You must have App.js or a component rendered by App.js render your component to have it show up
     3. Import your component from within project (see code examples)
     4. Add component to render/return (e.g. <MyComponent />)
 
-Steps for use rest calls
+### Steps for use rest calls
 
     1. Determine the API endpoint you want to call and what type of response it returns
     2. Determine in which component this data should live
