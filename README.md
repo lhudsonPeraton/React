@@ -1,25 +1,33 @@
 # React Sample App
 
-## Introductions
-VS Code is an IDE we recommend for working with React
+## Prerequisites
+1. Install NodeJS
+   - NodeJS Installation Instructions: https://nodejs.org/en/download 
+2. Install Vite
+   - Vite Installation Instructions: https://vite.dev/guide
+3. Install or open your favorite IDE
+   - Recommend Visual Studio Code: https://code.visualstudio.com/Download 
 
 ## Deploying the Sample App Locally
-1. Install NodeJS
-2. Clone this repository
-3. Change directories into the React folder if necessary
+1. Clone this repository
+   - `git clone https://github.com/lhudsonPeraton/React.git`
+2. Change directories into the React folder if necessary
    - Run `cd React`
-4. Run `npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`
-5. Run `npm run start`
+3. Install necessary dependencies (for this app, the material-ui, react-router, react-leaflet, and plotly are required)
+   - Run `npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`
+4. Run `npm run start`
    - Any warnings can be ignored
-6. Open a web browser and go to https://localhost:3000
+5. Open a web browser and go to https://localhost:5173
    - The sample app should load on the screen! 
     
 ## Creating a New React App
-
-1. Install NodeJS 
-2. run `npx create-react-app react-bootstrap-app` to create the base React app  
-3. run `npm install @mui/material @emotion/react @emotion/styled   react-router-dom@6 react-leaflet react-plotly.js plotly.js axios` to install the material-ui, react-router, react-leaflet, and plotly dependencies  
-4. run `npm run start` to run the react app  
+1. Run `npm create vite@latest <app name> --template <template name>`
+   - Use either the `react`, `react-ts`, `react-swc` or `react-swc-ts` template
+2. Download any dependencies you'd like to use and/or think you'll need
+   - For example, if you want to install the material-ui, react-router, react-leaflet, and plotly dependencies, run `npm install @mui/material @emotion/react @emotion/styled   react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`  
+3. Run `npm run start` to run the react app 
+4. Open a web browser + go to the local URL displayed after running `npm run start`
+   - Default local URL: `http://localhost:5173
 
 ## Tips for Beginners
 
