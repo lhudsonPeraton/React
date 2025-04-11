@@ -22,7 +22,7 @@
     
 ## Creating a New React App
 1. Run `npm create vite@latest <app name> --template <template name>`
-   - Use either the `react`, `react-ts`, `react-swc` or `react-swc-ts` template
+   - Use the `react` or `react-ts` template
 2. Download any dependencies you'd like to use and/or think you'll need
    - For example, if you want to install the material-ui, react-router, react-leaflet, and plotly dependencies, run `npm install @mui/material @emotion/react @emotion/styled   react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`  
 3. Run `npm run start` to run the react app 
