@@ -14,7 +14,7 @@
 2. Change directories into the React folder if necessary
    - Run `cd React`
 3. Install necessary dependencies (for this app, the material-ui, react-router, react-leaflet, and plotly are required)
-   - Run `npm install @mui/material @emotion/react @emotion/styled react-router-dom@6 react-leaflet react-plotly.js plotly.js axios`
+   - Run `npm install`
 4. Run `npm run start`
    - Any warnings can be ignored
 5. Open a web browser and go to https://localhost:5173
