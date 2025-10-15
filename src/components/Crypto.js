@@ -36,8 +36,17 @@ function Crypto() {
         )
         .then((res) => {
             console.log(res);
-            // Using the response from the get call, set the coin ids in the drop down
-            setCoinIds(res.data.slice(5000, 5010));
+            // Find a few preppulated coins (Doge, BTC, ETH)
+            const dogeCoinId = res.data.find(coin => coin.symbol === "doge");
+            const bitCoinId = res.data.find(coin => coin.symbol === "btc");
+            const ethCoinId = res.data.find(coin => coin.symbol === "eth");
+
+            // Grab 7 other coins returned from api
+            const randomCoins = res.data.slice(5000, 5007);
+
+            // Join them together and update the state
+            const coinIds = [bitCoinId, ethCoinId, dogeCoinId, ...randomCoins].filter(x => x !== undefined)
+            setCoinIds(coinIds);
         })
         .catch((err) => {
             alert(err);

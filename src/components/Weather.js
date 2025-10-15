@@ -10,13 +10,14 @@ import axios from "axios";
 
 // Former: Setting home position to the Virginia Tech drill field: 37.227746, -80.421960
 // Former: Penn State University: 40.798214, -77.859909
-const homePosition = [38.985995, -76.9414119];
+//Penn State University Update: 40.798214, -77.859909
+//UMD Position: 38.985995, -76.9414119
+//GMU Position: 38.8314578, -77.314322
+const homePosition = [38.8314578, -77.314322];
 
 function Weather() {
     // Using React hooks to manage state of the Weather function component
-    //Former VT Position: lat: 37.227746, lng: -80.421960
-    //Penn State University Update: 40.798214, -77.859909
-    const [position, setPosition] = useState({lat: 38.985995, lng: -76.9414119}); // position is used for latitude and longitude passed into API
+    const [position, setPosition] = useState({lat: homePosition[0], lng: homePosition[1]}); // position is used for latitude and longitude passed into API
     const [tempPosition, setTempPosition] = useState(position); // tempPosition is used to handle input boxes
     const [forecast, setForecast] = useState(null); // forecast holds forecast data
     const [location, setLocation] = useState(null); // location holds location data
